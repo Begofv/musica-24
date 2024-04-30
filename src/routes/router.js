@@ -1,6 +1,9 @@
 import { Router } from "express";
 
 import artistRouter from "./artistRouter.js";
+import bandRouter from "./bandRouter.js";
+
+
 
 const router = Router();
 
@@ -26,6 +29,7 @@ router.get("/form",(req,res)=>{
 })
 
 router.use("/artist",artistRouter);
+router.use("/band",bandRouter);
 /* router.post("/search",(req,res)=>{
     const {}
 }) */
