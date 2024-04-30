@@ -4,6 +4,9 @@ import apiRouter from "./apiRoutes/apiRouter.js";
 import viewRouter from "./viewRoutes/viewRouter.js";
 import artistRouter from "./artistRouter.js";
 import bandRouter from "./bandRouter.js";
+import albumRouter from "./albumRouter.js";
+import genreRouter from "./genreRouter.js";
+import songRouter from "./songRouter.js";
 
 
 
@@ -37,6 +40,9 @@ router.get("/form",(req,res)=>{
 
 router.use("/artist",artistRouter);
 router.use("/band",bandRouter);
+router.use("/album", albumRouter);
+router.use("/genre", genreRouter);
+router.use("/song", songRouter);
 /* router.post("/search",(req,res)=>{
     const {}
 }) */
