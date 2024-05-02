@@ -1,5 +1,7 @@
 import { Router } from "express";
 
+import apiRouter from "./apiRoutes/apiRouter.js";
+import viewRouter from "./viewRoutes/viewRouter.js";
 import artistRouter from "./artistRouter.js";
 import bandRouter from "./bandRouter.js";
 import albumRouter from "./albumRouter.js";
@@ -9,6 +11,11 @@ import songRouter from "./songRouter.js";
 
 
 const router = Router();
+
+
+
+router.use("/api",apiRouter);
+router.use("/",viewRouter);
 
 router.get("/",(req,res)=>{
     res.send("Hello " + process.env.APP_USERNAME)
